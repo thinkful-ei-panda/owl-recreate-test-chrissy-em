@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+// import STORE from './store';
+import Stage from './Stage';
+import Chatlog from './Chatlog';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends Component {
+
+  static defaultProps = {
+    store: {
+      participants: [],
+      chatEvents: [],
+    }
+  };
+
+  render() {
+    // const { store } = this.props
+    return (
+      <main className='App'>
+        <header className='App-header'>
+          <h1>Owl Sessions</h1>
+        </header>
+        <div className='App-list'>
+            <Stage />
+          ),
+        </div>
+        <div className='App-chat'>
+            <Chatlog 
+            
+            
+            />
+          ),
+        </div>
+      </main>
+    )
+  }
 }
 
 export default App;
